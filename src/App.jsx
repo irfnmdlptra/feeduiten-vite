@@ -108,6 +108,7 @@ const App = () => {
           title="Pemakaian"
           nominal={pengeluaranUang.toLocaleString()}
           transaksi={transaksiOUT}
+          string={" "}
         />
 
         <div className="col-6">
