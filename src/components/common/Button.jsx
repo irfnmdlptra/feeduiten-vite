@@ -6,9 +6,3 @@ export default function Button(props) {
   );
 }
 
-
-// export default function ButtonSave(props) {
-//   return  <button type="submit" className={props.variant} onClick={addItem}>
-//   Save
-// </button>
-// }

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import ModalCreate from "./components/layout/Modal";
 import Header from "./components/layout/Header";
 import SummaryCard from "./components/layout/SummaryCard";
 import SummaryList from "./components/layout/SummaryList";
+import SummaryTransactions from "./components/layout/SummaryTransactions";
+
+
 const App = () => {
   const [sisaUang, setSisaUang] = useState(0);
   const [persentaseUang, setPersentaseUang] = useState(0);
@@ -94,51 +96,41 @@ const App = () => {
     setPersentaseUang(Math.round(persenUang));
   };
 
+  function deleteItem(index) {
+    const newSummary = [...summary];
+    newSummary.splice(index, 1);
+    setSummary(newSummary);
+  }
+
   return (
     <div className="container py-5">
       <Header sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
 
       <div className="row mt-4">
-        <SummaryCard
-          title="Pemasukan"
-          nominal={pemasukanUang.toLocaleString()}
-          transaksi={transaksiIN}
-        />
-        <SummaryCard
-          title="Pemakaian"
-          nominal={pengeluaranUang.toLocaleString()}
-          transaksi={transaksiOUT}
-          string={" "}
-        />
+        {[
+          {
+            title: "Pemasukan",
+            nominal: pemasukanUang,
+            transaksi: transaksiIN,
+          },
+          {
+            title: "Pemakaian",
+            nominal: pengeluaranUang,
+            transaksi: transaksiOUT,
+          },
+        ].map((item) => (
+          <SummaryCard
+            key={item.title} // Menggunakan title sebagai kunci
+            title={item.title}
+            nominal={item.nominal.toLocaleString()}
+            transaksi={item.transaksi}
+          />
+        ))}
       </div>
 
-      <div className="row mt-4">
-        <div className="col-12 d-flex align-items-center justify-content-between">
-          <h4>Ringkasan Transaksi</h4>
-          <div className="wrapper-button d-flex">
-            <ModalCreate
-              action={tambahItem}
-              category="IN"
-              variant="button btn-ungu px-3 py-2 me-2 box-sh"
-              text="Pemasukan"
-              icon="bi bi-plus-circle ms-1"
-              modalheading="Tambahkan Pemasukan"
-            />
-            <ModalCreate
-              action={tambahItem}
-              category="OUT"
-              variant="button btn-pink px-3 py-2 box-sh"
-              text="Pengeluaran"
-              icon="bi bi-dash-circle-dotted ms-1"
-              modalheading="Tambahkan Pengeluaran"
-            />
-          </div>
-        </div>
-      </div>
+      <SummaryTransactions tambahItem={tambahItem} />
 
-      <SummaryList summary={summary} />
-
-      
+      <SummaryList summary={summary} deleteItem={deleteItem} />
     </div>
   );
 };

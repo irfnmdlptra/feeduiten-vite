@@ -45,6 +45,13 @@ export default function ModalCreate(props) {
       };
       props.action(data);
       setShow(false);
+
+      // Mengatur ulang nilai input menjadi kosong
+      setDescription("");
+      setAmount(0);
+      setDate("");
+      setCategory("");
+      setIsDescriptionValid(false);
     } else {
       alert("Mohon masukkan deskripsi!");
     }
