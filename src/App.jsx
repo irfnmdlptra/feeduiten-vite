@@ -100,19 +100,8 @@ const App = () => {
 
       <div className="row mt-4">
         <SummaryCard title="Pemasukan" nominal={pemasukanUang.toLocaleString()} transaksi={transaksiIN}/>
-        {/* <div className="col-6">
-          <div className="card-wrapper p-4">
-            <div className="icon-wrapper-in box-sh">
-              <i className="bi bi-wallet2" aria-hidden="true"></i>
-            </div>
-            <span className="title-sm">Pemasukan</span>
-            <h3 className="fw-bold">Rp. {pemasukanUang.toLocaleString()} ,</h3>
-            <div>
-              <span className="title-sm text-ungu fw-bold">{transaksiIN} </span>
-              <span className="title-sm"> Transaksi</span>
-            </div>
-          </div>
-        </div> */}
+        <SummaryCard title="Pemakaian" nominal={pengeluaranUang.toLocaleString()} transaksi={transaksiOUT}/>
+      
 
         <div className="col-6">
           <div className="card-wrapper p-4 ">
@@ -121,7 +110,7 @@ const App = () => {
             </div>
             <span className="title-sm">Pemakaian</span>
             <h3 className="fw-bold">
-              Rp. {pengeluaranUang.toLocaleString()} ,
+              Rp.  ,
             </h3>
             <div>
               <span className="title-sm text-ungu fw-bold">
