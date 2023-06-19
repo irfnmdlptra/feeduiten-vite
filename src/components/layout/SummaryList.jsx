@@ -1,7 +1,7 @@
 import React from "react";
 import Alert from "../common/Alert";
 
-const SummaryList = ({ summary }) => {
+export default function SummaryList({ summary }) {
   return (
     <div className="row mt-4">
       {summary.length < 1 && <Alert />}
