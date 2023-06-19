@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import ModalCreate from "./components/layout/Modal";
-import Alert from "./components/common/Alert";
 import Header from "./components/layout/Header";
 import SummaryCard from "./components/layout/SummaryCard";
+import SummaryList from "./components/layout/SummaryList";
 const App = () => {
   const [sisaUang, setSisaUang] = useState(0);
   const [persentaseUang, setPersentaseUang] = useState(0);
@@ -136,41 +136,9 @@ const App = () => {
         </div>
       </div>
 
-      <div className="row mt-4">
-        {summary.length < 1 && <Alert />}
-        {summary.map((sum, index) => {
-          return (
-            <div
-              key={index}
-              className="col-12 d-flex mb-3 justify-content-between align-items-center"
-            >
-              <div className="d-flex align-items-center">
-                <div
-                  className={
-                    sum.category === "IN"
-                      ? "icon-wrapper-in box-sh"
-                      : "icon-wrapper-out box-sh"
-                  }
-                >
-                  <i
-                    className={
-                      sum.category === "IN" ? "bi bi-wallet2" : "bi bi-bag-dash"
-                    }
-                    aria-hidden="true"
-                  ></i>
-                </div>
-                <div className="transaction ms-3 d-flex flex-column">
-                  <h5>{sum.description} </h5>
-                  <span className="title-sm">{sum.date} </span>
-                </div>
-              </div>
-              <h6 className={sum.category === "IN" ? "money-in" : "money-out"}>
-                Rp. {sum.amount.toLocaleString()}{" "}
-              </h6>
-            </div>
-          );
-        })}
-      </div>
+      <SummaryList summary={summary} />
+
+      
     </div>
   );
 };
