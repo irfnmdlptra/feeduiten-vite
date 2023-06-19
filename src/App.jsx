@@ -96,16 +96,7 @@ const App = () => {
   return (
     <div className="container py-5">
       <Headers sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
-      {/* <div className="row">
-        <div className="col-12 text-center">
-          <h1 className="fw-bold">FEEDUITEN APPS</h1>
-          <hr className="w-75 mx-auto" />
-          <h2 className="fw-bold">Rp.  ,</h2>
-          <span className="title-sm">
-            Sisa uang kamu tersisa {persentaseUang}% lagi
-          </span>
-        </div>
-      </div> */}
+   
 
       <div className="row mt-4">
         <div className="col-6">
