@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import ModalCreate from "./components/layout/Modal";
 import Alert from "./components/common/Alert";
-import Header from "./components/layout/Header";
-
+import Headers from "./components/layout/Headers";
 const App = () => {
   const [sisaUang, setSisaUang] = useState(0);
   const [persentaseUang, setPersentaseUang] = useState(0);
@@ -96,17 +95,17 @@ const App = () => {
 
   return (
     <div className="container py-5">
-      <Header
-      <div className="row">
+      <Headers sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
+      {/* <div className="row">
         <div className="col-12 text-center">
           <h1 className="fw-bold">FEEDUITEN APPS</h1>
           <hr className="w-75 mx-auto" />
-          <h2 className="fw-bold">Rp. {sisaUang.toLocaleString()} ,</h2>
+          <h2 className="fw-bold">Rp.  ,</h2>
           <span className="title-sm">
             Sisa uang kamu tersisa {persentaseUang}% lagi
           </span>
         </div>
-      </div>
+      </div> */}
 
       <div className="row mt-4">
         <div className="col-6">
@@ -129,7 +128,9 @@ const App = () => {
               <i className="bi bi-cash-stack"></i>
             </div>
             <span className="title-sm">Pemakaian</span>
-            <h3 className="fw-bold">Rp. {pengeluaranUang.toLocaleString()} ,</h3>
+            <h3 className="fw-bold">
+              Rp. {pengeluaranUang.toLocaleString()} ,
+            </h3>
             <div>
               <span className="title-sm text-ungu fw-bold">
                 {transaksiOUT}{" "}
