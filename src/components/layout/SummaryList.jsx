@@ -39,4 +39,3 @@ export default function SummaryList({ summary }) {
   );
 };
 
-export default SummaryList;
