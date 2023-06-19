@@ -110,22 +110,6 @@ const App = () => {
           transaksi={transaksiOUT}
           string={" "}
         />
-
-        <div className="col-6">
-          <div className="card-wrapper p-4 ">
-            <div className="icon-wrapper-out box-sh">
-              <i className="bi bi-cash-stack"></i>
-            </div>
-            <span className="title-sm">Pemakaian</span>
-            <h3 className="fw-bold">Rp. ,</h3>
-            <div>
-              <span className="title-sm text-ungu fw-bold">
-                {transaksiOUT}{" "}
-              </span>
-              <span className="title-sm"> Transaksi</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="row mt-4">
