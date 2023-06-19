@@ -99,7 +99,7 @@ const App = () => {
       <Header sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
 
       <div className="row mt-4">
-        {/* <SummaryCard title="Pemasukan" nominal={pemasukanUang.toLocaleString()} transaksi={transaksiIN}/> */}
+        <SummaryCard title="Pemasukan" nominal={pemasukanUang.toLocaleString()} transaksi={transaksiIN}/>
         <div className="col-6">
           <div className="card-wrapper p-4">
             <div className="icon-wrapper-in box-sh">
