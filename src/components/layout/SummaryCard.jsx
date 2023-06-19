@@ -9,7 +9,7 @@ export default function SummaryCard(props) {
           <span className="title-sm">{props.title} </span>
           <h3 className="fw-bold">Rp. {props.nominal},</h3>
           <div>
-            <span className="title-sm text-ungu fw-bold"> {props.transaksi}</span>
+            <span className="title-sm text-ungu fw-bold"> {props.transaksi} {props.string}</span>
             <span className="title-sm"> Transaksi</span>
           </div>
         </div>

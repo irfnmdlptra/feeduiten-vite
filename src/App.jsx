@@ -99,9 +99,16 @@ const App = () => {
       <Header sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
 
       <div className="row mt-4">
-        <SummaryCard title="Pemasukan" nominal={pemasukanUang.toLocaleString()} transaksi={transaksiIN}/>
-        <SummaryCard title="Pemakaian" nominal={pengeluaranUang.toLocaleString()} transaksi={transaksiOUT}/>
-      
+        <SummaryCard
+          title="Pemasukan"
+          nominal={pemasukanUang.toLocaleString()}
+          transaksi={transaksiIN}
+        />
+        <SummaryCard
+          title="Pemakaian"
+          nominal={pengeluaranUang.toLocaleString()}
+          transaksi={transaksiOUT}
+        />
 
         <div className="col-6">
           <div className="card-wrapper p-4 ">
@@ -109,9 +116,7 @@ const App = () => {
               <i className="bi bi-cash-stack"></i>
             </div>
             <span className="title-sm">Pemakaian</span>
-            <h3 className="fw-bold">
-              Rp.  ,
-            </h3>
+            <h3 className="fw-bold">Rp. ,</h3>
             <div>
               <span className="title-sm text-ungu fw-bold">
                 {transaksiOUT}{" "}
