@@ -3,6 +3,7 @@ import "./App.css";
 import ModalCreate from "./components/layout/Modal";
 import Alert from "./components/common/Alert";
 import Header from "./components/layout/Header";
+import SummaryCard from "./components/layout/SummaryCard";
 const App = () => {
   const [sisaUang, setSisaUang] = useState(0);
   const [persentaseUang, setPersentaseUang] = useState(0);
@@ -96,11 +97,10 @@ const App = () => {
   return (
     <div className="container py-5">
       <Header sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
-   
 
       <div className="row mt-4">
-        </>
-        <div className="col-6">
+        <SummaryCard title="Pemasukan" nominal={pemasukanUang.toLocaleString()} transaksi={transaksiIN}/>
+        {/* <div className="col-6">
           <div className="card-wrapper p-4">
             <div className="icon-wrapper-in box-sh">
               <i className="bi bi-wallet2" aria-hidden="true"></i>
@@ -112,7 +112,7 @@ const App = () => {
               <span className="title-sm"> Transaksi</span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="col-6">
           <div className="card-wrapper p-4 ">
