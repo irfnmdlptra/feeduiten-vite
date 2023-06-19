@@ -7,10 +7,10 @@ export default function SummaryCard(props) {
             <i className="bi bi-wallet2" aria-hidden="true"></i>
           </div>
           <span className="title-sm">{props.title} </span>
-          <h3 className="fw-bold">Rp. {pemasukanUang.toLocaleString()} ,</h3>
+          <h3 className="fw-bold">Rp. {props.nominal},</h3>
           <div>
-            <span className="title-sm text-ungu fw-bold">{props.nominal} </span>
-            <span className="title-sm"> {props.transaksi}</span>
+            <span className="title-sm text-ungu fw-bold"> {props.transaksi}</span>
+            <span className="title-sm"> Transaksi</span>
           </div>
         </div>
       </div>

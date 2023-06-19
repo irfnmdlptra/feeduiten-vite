@@ -100,7 +100,7 @@ const App = () => {
 
       <div className="row mt-4">
         <SummaryCard title="Pemasukan" nominal={pemasukanUang.toLocaleString()} transaksi={transaksiIN}/>
-        <div className="col-6">
+        {/* <div className="col-6">
           <div className="card-wrapper p-4">
             <div className="icon-wrapper-in box-sh">
               <i className="bi bi-wallet2" aria-hidden="true"></i>
@@ -112,7 +112,7 @@ const App = () => {
               <span className="title-sm"> Transaksi</span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="col-6">
           <div className="card-wrapper p-4 ">
