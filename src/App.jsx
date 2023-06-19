@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import ModalCreate from "./components/layout/Modal";
 import Alert from "./components/common/Alert";
+import Header from "./components/layout/Header";
 
 const App = () => {
   const [sisaUang, setSisaUang] = useState(0);
@@ -95,6 +96,7 @@ const App = () => {
 
   return (
     <div className="container py-5">
+      <Header
       <div className="row">
         <div className="col-12 text-center">
           <h1 className="fw-bold">FEEDUITEN APPS</h1>
