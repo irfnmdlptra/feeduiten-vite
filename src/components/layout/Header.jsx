@@ -1,4 +1,4 @@
-export default function Header(props) {
+export default function Headers(props) {
   return (
     <>
       <div className="row">
