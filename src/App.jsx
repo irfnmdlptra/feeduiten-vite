@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import ModalCreate from "./components/layout/Modal";
 import Alert from "./components/common/Alert";
-import Headers from "./components/layout/Headers";
+import Header from "./components/layout/Header";
 const App = () => {
   const [sisaUang, setSisaUang] = useState(0);
   const [persentaseUang, setPersentaseUang] = useState(0);
@@ -95,10 +95,11 @@ const App = () => {
 
   return (
     <div className="container py-5">
-      <Headers sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
+      <Header sisa={sisaUang.toLocaleString()} persen={persentaseUang} />
    
 
       <div className="row mt-4">
+        </>
         <div className="col-6">
           <div className="card-wrapper p-4">
             <div className="icon-wrapper-in box-sh">
